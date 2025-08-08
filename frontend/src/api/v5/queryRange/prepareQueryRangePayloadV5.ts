@@ -266,6 +266,7 @@ export function convertBuilderQueriesToV5(
 					spec = {
 						name: queryName,
 						signal: 'metrics' as const,
+						source: queryData.source || '',
 						...baseSpec,
 						aggregations: aggregations as MetricAggregation[],
 						// reduceTo: queryData.reduceTo,
